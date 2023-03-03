@@ -6,7 +6,7 @@ from pygltflib import GLTF2,BufferFormat
 from pygltflib.utils import ImageFormat
 filename = "C.glb"
 gltf = GLTF2().load(filename)
-gltf.images[0].name = gltf.images[0].uri  # will save the data uri to this file (regardless of data format)
+# gltf.images[0].name = gltf.images[0].uri  # will save the data uri to this file (regardless of data format)
 gltf.convert_images(ImageFormat.FILE, path='img',override=True)
 for item in gltf.images:
     bufferView =  item.bufferView
